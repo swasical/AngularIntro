@@ -1,0 +1,48 @@
+body 
+{
+	font-size: 20px;
+}
+
+.table
+{
+	display: table;
+}
+
+.tr
+{
+	display: table-row;
+}
+
+.tr > *
+{
+	display: table-cell;
+	padding: 5px 20px;
+}
+
+.HR
+{
+	border-bottom: 3px solid black;
+	margin: 10px 0;
+}
+
+.sortBtn {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;	
+	border-bottom: 15px solid black;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;	
+	border-top: 15px solid black;
+}

@@ -1,0 +1,43 @@
+<!--
+   Shout-out to AngularJS in 20-ish Minutes
+   Dan Wahlin
+
+   @DanWahlin
+   http://weblogs.asp.net/dwahlin
+   
+   1. Data Binding and Directives
+   2. Filters
+   3. Modules and Controllers
+   4. Factories
+-->
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Demo App</title>
+	<link href="styles/appStyle.css" rel="stylesheet" />
+	<link href="styles/animations.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>AngularJS Intro</h1>
+	<div ng-view class="slide-animation"></div>
+	<div class="HR"></div>
+    <div ng-controller="ctrlStudents">
+		<input type="text" ng-model="filter.Name" />
+		<div class="sortBtn" ng-class="{'arrow-down':SortDesc,'arrow-up':!SortDesc}" ng-click="ToggleSortDesc()"></div>
+		<div class="table">
+			<div class="tr">
+				<div>Name</div>
+				<div>Total</div>
+			</div>
+			<div class="tr" ng-repeat="student in Students | filter:filter | orderBy:'Name':SortDesc">
+				<div>{{student.Name}}</div>
+				<div>{{student.Total | currency}}</div>
+			</div>
+		</div>
+	</div>
+    <script src="lib/angular-1.2.25.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
