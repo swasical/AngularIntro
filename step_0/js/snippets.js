@@ -1,8 +1,8 @@
 // create a module
 var app = angular.module('demoApp',['ngRoute', 'ngAnimate']);
 
-// create a conctroller
-app.controller('ctrleStudents', function($scope, StudentsFactory) {
+// create a controller
+app.controller('ctrlStudents', function($scope, StudentsFactory) {
 	function init() {
 		$scope.SortDesc = true;
 		StudentsFactory.getStudents().success(function(students) {
